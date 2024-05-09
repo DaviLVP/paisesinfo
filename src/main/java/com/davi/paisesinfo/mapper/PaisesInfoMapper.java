@@ -19,8 +19,8 @@ public class PaisesInfoMapper {
     public PaisesInfo toPaisesInfo(CountryInfo source){
 
         PaisesInfo destination = new PaisesInfo();
-        destination.setIsoAlpha2(source.getIsoAlpha2());
-        destination.setIsoAlpha3(source.getIsoAlpha3());
+        destination.setIsoAlfa2(source.getIsoAlpha2());
+        destination.setIsoAlfa3(source.getIsoAlpha3());
         destination.setNome(source.getName());
         destination.setIsoNome(source.getIsoName());
         destination.setIsoNomeCompleto(source.getIsoNameFull());

@@ -20,8 +20,8 @@ import java.util.List;
 public class PaisesInfo {
     @Id
     private String id;
-    private String isoAlpha2;
-    private String isoAlpha3;
+    private String isoAlfa2;
+    private String isoAlfa3;
     private String nome;
     private String isoNome;
     private String isoNomeCompleto;
