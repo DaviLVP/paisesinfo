@@ -5,6 +5,7 @@ import com.davi.paisesinfo.model.PaisesInfo;
 import com.davi.paisesinfo.service.PaisesInfoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,10 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class PaisesInfoController {
     private final PaisesInfoService paisesInfoService;
-
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/paises-info")
     public ResponseEntity<PaisesInfo> getCountryInfo(@RequestParam String code,
                                                      @RequestParam String localityLanguage){
         return ResponseEntity.ok(paisesInfoService.getCountryInfo(code, localityLanguage));
+
     }
 }
